@@ -4,7 +4,7 @@ class Sevgi < Formula
   url "https://github.com/roktas/sevgi/archive/refs/tags/v0.97.0.tar.gz"
   sha256 "54284903d8ea8addc672222ec94ad038a4a1406850279f57312632235bf00bc5"
   license "GPL-3.0-or-later"
-  revision 3
+  revision 4
   head "https://github.com/roktas/sevgi.git", branch: "main"
 
   depends_on "pkgconf" => :build
@@ -78,11 +78,6 @@ class Sevgi < Formula
   resource "openssl" do
     url "https://rubygems.org/downloads/openssl-4.0.2.gem"
     sha256 "1037ad2868ae58df9ad917891c0c0f9815a1172f6846d4bcdd508e4c2ee747c2"
-  end
-
-  resource "strscan" do
-    url "https://rubygems.org/downloads/strscan-3.1.8.gem"
-    sha256 "aae2db611a225559f21ffbb71765c9a4e60fd262534a9ea84f4f11c7f32f679e"
   end
 
   resource "hexapdf" do
@@ -287,16 +282,23 @@ class Sevgi < Formula
       assert_match "Sevgi/Parentheses", shell_output("#{rubocop} --show-cops Sevgi/Parentheses")
     end
 
-    output = testpath/"circle.png"
+    pdf = testpath/"circle.pdf"
+    png = testpath/"circle.png"
     (testpath/"circle.sevgi").write <<~RUBY
-      SVG width: 10, height: 10 do
+      drawing = SVG width: 10, height: 10 do
         circle cx: 5, cy: 5, r: 4, fill: "tomato"
-      end.PNG #{output.to_s.dump}
+      end
+
+      drawing.PDF #{pdf.to_s.dump}
+      drawing.PNG #{png.to_s.dump}
     RUBY
 
-    system bin/"sevgi", testpath/"circle.sevgi"
-    assert_path_exists output
-    assert_operator output.size, :>, 0
+    log = shell_output("#{bin}/sevgi #{testpath}/circle.sevgi 2>&1")
+    refute_match "already initialized constant", log
+    [pdf, png].each do |output|
+      assert_path_exists output
+      assert_operator output.size, :>, 0
+    end
 
     source = testpath/"circle.svg"
     source.write '<svg xmlns="http://www.w3.org/2000/svg"><circle r="4"/></svg>'
