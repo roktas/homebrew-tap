@@ -4,7 +4,7 @@ class Sevgi < Formula
   url "https://github.com/roktas/sevgi/archive/refs/tags/v0.97.0.tar.gz"
   sha256 "54284903d8ea8addc672222ec94ad038a4a1406850279f57312632235bf00bc5"
   license "GPL-3.0-or-later"
-  revision 2
+  revision 3
   head "https://github.com/roktas/sevgi.git", branch: "main"
 
   depends_on "pkgconf" => :build
@@ -260,7 +260,7 @@ class Sevgi < Formula
 
     (share/"sevgi/skills").install buildpath/"appendix/agents/skills/sevgi" if appendix
 
-    executables = appendix ? %w[igsev igves rubocop sevgi] : %w[igves sevgi]
+    executables = appendix ? %w[igsev igves sevgi] : %w[igves sevgi]
     bin.install(*executables.map { libexec/"bin"/it })
     environment = {
       PATH:     "#{formula_opt_bin("ruby")}:$PATH",
@@ -271,6 +271,8 @@ class Sevgi < Formula
   end
 
   test do
+    ENV["GEM_HOME"] = libexec
+
     assert_equal version.to_s, shell_output("#{bin}/sevgi --version").strip
     assert_equal version.to_s, shell_output("#{bin}/igves --version").strip
     assert_match "pdfcpu", shell_output("#{formula_opt_bin("pdfcpu")}/pdfcpu version")
@@ -281,7 +283,7 @@ class Sevgi < Formula
       skill = shell_output("#{bin}/sevgi --skill").strip
       assert_equal (opt_share/"sevgi/skills/sevgi").to_s, skill
       assert_path_exists Pathname(skill)/"SKILL.md"
-      rubocop = "#{bin}/rubocop --config /dev/null --plugin sevgi-appendix"
+      rubocop = "#{libexec}/bin/rubocop --config /dev/null --plugin sevgi-appendix"
       assert_match "Sevgi/Parentheses", shell_output("#{rubocop} --show-cops Sevgi/Parentheses")
     end
 
