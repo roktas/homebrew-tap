@@ -255,7 +255,8 @@ class Sevgi < Formula
 
     (share/"sevgi/skills").install buildpath/"appendix/agents/skills/sevgi" if appendix
 
-    bin.install libexec/"bin/igves", libexec/"bin/sevgi"
+    executables = appendix ? %w[igsev igves sevgi] : %w[igves sevgi]
+    bin.install(*executables.map { libexec/"bin"/it })
     environment = {
       PATH:     "#{formula_opt_bin("ruby")}:$PATH",
       GEM_HOME: ENV["GEM_HOME"],
@@ -271,6 +272,7 @@ class Sevgi < Formula
     assert_match "pdfunite", shell_output("#{formula_opt_bin("poppler")}/pdfunite -v 2>&1")
 
     if build.head? || version >= Version.new("0.97.0")
+      assert_equal version.to_s, shell_output("#{bin}/igsev --version").strip
       skill = shell_output("#{bin}/sevgi --skill").strip
       assert_equal (opt_share/"sevgi/skills/sevgi").to_s, skill
       assert_path_exists Pathname(skill)/"SKILL.md"
@@ -291,5 +293,8 @@ class Sevgi < Formula
     source = testpath/"circle.svg"
     source.write '<svg xmlns="http://www.w3.org/2000/svg"><circle r="4"/></svg>'
     assert_match "circle r: 4", shell_output("#{bin}/igves #{source}")
+    if build.head? || version >= Version.new("0.97.0")
+      assert_match '<circle r="4"/>', shell_output("#{bin}/igsev #{source}")
+    end
   end
 end
