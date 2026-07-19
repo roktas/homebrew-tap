@@ -4,7 +4,7 @@ class Sevgi < Formula
   url "https://github.com/roktas/sevgi/archive/refs/tags/v0.97.0.tar.gz"
   sha256 "54284903d8ea8addc672222ec94ad038a4a1406850279f57312632235bf00bc5"
   license "GPL-3.0-or-later"
-  revision 1
+  revision 2
   head "https://github.com/roktas/sevgi.git", branch: "main"
 
   depends_on "pkgconf" => :build
@@ -233,10 +233,14 @@ class Sevgi < Formula
         "--ignore-dependencies", "--no-document", "--install-dir", libexec
       ]
       if resource.name == "nokogiri"
+        xml2 = formula_opt_prefix("libxml2")
+        xslt = formula_opt_prefix("libxslt")
         args += [
           "--", "--use-system-libraries",
-          "--with-xml2-dir=#{formula_opt_prefix("libxml2")}",
-          "--with-xslt-dir=#{formula_opt_prefix("libxslt")}"
+          "--with-xml2-include=#{xml2/"include/libxml2"}",
+          "--with-xml2-lib=#{xml2/"lib"}",
+          "--with-xslt-include=#{xslt/"include"}",
+          "--with-xslt-lib=#{xslt/"lib"}"
         ]
       end
       system(*args)
