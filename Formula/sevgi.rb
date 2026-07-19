@@ -277,7 +277,8 @@ class Sevgi < Formula
       skill = shell_output("#{bin}/sevgi --skill").strip
       assert_equal (opt_share/"sevgi/skills/sevgi").to_s, skill
       assert_path_exists Pathname(skill)/"SKILL.md"
-      assert_match "Sevgi/Parentheses", shell_output("#{bin}/rubocop --show-cops Sevgi/Parentheses")
+      rubocop = "#{bin}/rubocop --config /dev/null --plugin sevgi-appendix"
+      assert_match "Sevgi/Parentheses", shell_output("#{rubocop} --show-cops Sevgi/Parentheses")
     end
 
     output = testpath/"circle.png"
