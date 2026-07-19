@@ -4,6 +4,7 @@ class Sevgi < Formula
   url "https://github.com/roktas/sevgi/archive/refs/tags/v0.97.0.tar.gz"
   sha256 "54284903d8ea8addc672222ec94ad038a4a1406850279f57312632235bf00bc5"
   license "GPL-3.0-or-later"
+  revision 1
   head "https://github.com/roktas/sevgi.git", branch: "main"
 
   depends_on "pkgconf" => :build
@@ -255,7 +256,7 @@ class Sevgi < Formula
 
     (share/"sevgi/skills").install buildpath/"appendix/agents/skills/sevgi" if appendix
 
-    executables = appendix ? %w[igsev igves sevgi] : %w[igves sevgi]
+    executables = appendix ? %w[igsev igves rubocop sevgi] : %w[igves sevgi]
     bin.install(*executables.map { libexec/"bin"/it })
     environment = {
       PATH:     "#{formula_opt_bin("ruby")}:$PATH",
