@@ -1,8 +1,8 @@
 class Sevgi < Formula
   desc "Ruby toolkit for creating SVG"
   homepage "https://sevgi.roktas.dev"
-  url "https://github.com/roktas/sevgi/archive/refs/tags/v0.98.0.tar.gz"
-  sha256 "ae953336c6b9246513b87abcc70aa3e98eac84e274cbfaba4c512d9bf1ea773f"
+  url "https://github.com/roktas/sevgi/archive/refs/tags/v0.98.1.tar.gz"
+  sha256 "a4d8d6543d2c8f2afa2acf90db78fd74f8d4564bef1debec3346cb4ff13d8fc2"
   license "GPL-3.0-or-later"
   head "https://github.com/roktas/sevgi.git", branch: "main"
 
@@ -252,7 +252,7 @@ class Sevgi < Formula
       end
     end
 
-    (share/"sevgi/skills").install buildpath/"appendix/agents/skills/sevgi" if appendix
+    (pkgshare/"skills").install buildpath/"appendix/agents/skills/sevgi" if appendix
 
     executables = appendix ? %w[igsev igves sevgi] : %w[igves sevgi]
     bin.install(*executables.map { libexec/"bin"/it })
