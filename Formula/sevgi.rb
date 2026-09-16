@@ -196,7 +196,7 @@ class Sevgi < Formula
 
   resource "gdk_pixbuf2" do
     url "https://rubygems.org/downloads/gdk_pixbuf2-4.3.9.gem"
-    sha256 "1b78f2b21de7d4cef6b351895d1bc22099a53d987f005d4b09f62b6816b3cbc"
+    sha256 "1b78f2b21de7d4dcef6b351895d1bc22099a53d987f005d4b09f62b6816b3cbc"
   end
 
   resource "cairo-gobject" do
