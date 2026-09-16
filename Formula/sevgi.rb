@@ -1,8 +1,8 @@
 class Sevgi < Formula
   desc "Ruby toolkit for creating SVG"
   homepage "https://sevgi.roktas.dev"
-  url "https://github.com/roktas/sevgi/archive/refs/tags/v0.100.0.tar.gz"
-  sha256 "e45ad1e30e21ce376f12d260f062daebd5d0de35a71c786b3b31b10ee0495625"
+  url "https://github.com/roktas/sevgi/archive/refs/tags/v1.0.0.tar.gz"
+  sha256 "42d46dee378f838241c1d1cbeb9d2d18ad50f72357854a95adf9f00fbee0160d"
   license "GPL-3.0-or-later"
   head "https://github.com/roktas/sevgi.git", branch: "main"
 
@@ -80,13 +80,13 @@ class Sevgi < Formula
   end
 
   resource "hexapdf" do
-    url "https://rubygems.org/downloads/hexapdf-1.9.1.gem"
-    sha256 "2d1f6a3622e6bc2a70a707d4c3f3fa44f5552ecd9d899f6283abb07398a84884"
+    url "https://rubygems.org/downloads/hexapdf-1.10.0.gem"
+    sha256 "9c2e8d094876878c6203d441655fafc1890870041456e03205eec7d83edf9db2"
   end
 
   resource "json" do
-    url "https://rubygems.org/downloads/json-2.21.1.gem"
-    sha256 "13a43df75d95641443f5702dff350f237164a9d811ff0f2c2800d4d980220583"
+    url "https://rubygems.org/downloads/json-3.0.2.gem"
+    sha256 "8e6d7e7b11384c21230430cef90b71f14849a34a1f4452796670f7c981bd19df"
   end
 
   resource "ast" do
@@ -105,8 +105,8 @@ class Sevgi < Formula
   end
 
   resource "parallel" do
-    url "https://rubygems.org/downloads/parallel-2.1.0.gem"
-    sha256 "b35258865c2e31134c5ecb708beaaf6772adf9d5efae28e93e99260877b09356"
+    url "https://rubygems.org/downloads/parallel-2.2.0.gem"
+    sha256 "e1059c5fd7b649558a0aec38a769f06a42942bdb40503d005a59c352fe011cd8"
   end
 
   resource "parser" do
@@ -150,8 +150,8 @@ class Sevgi < Formula
   end
 
   resource "rubocop" do
-    url "https://rubygems.org/downloads/rubocop-1.88.2.gem"
-    sha256 "8def251c90cd955feb4daa3edc0ab56893250c4ce90ef81e6c80c03f9a939bbf"
+    url "https://rubygems.org/downloads/rubocop-1.91.0.gem"
+    sha256 "9c82b7bf391c5d7e3798c5b9996e22a1fe3bd7468e351dfdeb96140c058296d0"
   end
 
   resource "matrix" do
@@ -160,8 +160,8 @@ class Sevgi < Formula
   end
 
   resource "red-colors" do
-    url "https://rubygems.org/downloads/red-colors-0.4.0.gem"
-    sha256 "2356eba0782ca6c44caa47645fbf942a2b16d85905c35c6e3f80d5ff0c04929a"
+    url "https://rubygems.org/downloads/red-colors-0.5.0.gem"
+    sha256 "0a33f603d1843035fe467485ba4461022e3b5a2de9a0f0371e7cc0939b99ad19"
   end
 
   resource "cairo" do
@@ -170,13 +170,13 @@ class Sevgi < Formula
   end
 
   resource "glib2" do
-    url "https://rubygems.org/downloads/glib2-4.3.7.gem"
-    sha256 "6d5e1e04b3bfcb59ed18ef9ef7689151fc66b93e3a8b3a15d330fd97fa0223ed"
+    url "https://rubygems.org/downloads/glib2-4.3.9.gem"
+    sha256 "32c1db447e812e5e34f9e62f1f2103e2cb4a5d0d03217a886b2a2877639549cd"
   end
 
   resource "gobject-introspection" do
-    url "https://rubygems.org/downloads/gobject-introspection-4.3.7.gem"
-    sha256 "037cd58d338ec00f7cd877243527dcb52e9d8c54e461ee8ca090855ee62cce29"
+    url "https://rubygems.org/downloads/gobject-introspection-4.3.9.gem"
+    sha256 "509c0e69b99fb171683f28ea3172f82a46950b032f4628986330418771bdd56b"
   end
 
   resource "fiddle" do
@@ -185,8 +185,8 @@ class Sevgi < Formula
   end
 
   resource "gio2" do
-    url "https://rubygems.org/downloads/gio2-4.3.7.gem"
-    sha256 "7cc31c15d83324489dc7bcab545a6fef3aac42d41304e7a67e545d9a475f0f6d"
+    url "https://rubygems.org/downloads/gio2-4.3.9.gem"
+    sha256 "6ddcbaec05beb20332fcfd1ca598dcf46392541aeb0b5d4b8df2306adffc0acc"
   end
 
   resource "rake" do
@@ -195,18 +195,18 @@ class Sevgi < Formula
   end
 
   resource "gdk_pixbuf2" do
-    url "https://rubygems.org/downloads/gdk_pixbuf2-4.3.7.gem"
-    sha256 "6eecabf3136ddc708ff438c9f6c19e11d0f5d883b8d83d9b577761070cc18807"
+    url "https://rubygems.org/downloads/gdk_pixbuf2-4.3.9.gem"
+    sha256 "1b78f2b21de7d4cef6b351895d1bc22099a53d987f005d4b09f62b6816b3cbc"
   end
 
   resource "cairo-gobject" do
-    url "https://rubygems.org/downloads/cairo-gobject-4.3.7.gem"
-    sha256 "d23cd5d6c6a958ef275ef9bc76af6fea61bd49a4db74f5ab21ee8067f5d400d4"
+    url "https://rubygems.org/downloads/cairo-gobject-4.3.9.gem"
+    sha256 "f093931812898edd87416691b8e3315c61a0c8a6d531519fbc6c64e97b6d85c8"
   end
 
   resource "rsvg2" do
-    url "https://rubygems.org/downloads/rsvg2-4.3.7.gem"
-    sha256 "7e6d99550e199f647ac3250d7ce50345444f0b97991e0a00d091d3027ee8da60"
+    url "https://rubygems.org/downloads/rsvg2-4.3.9.gem"
+    sha256 "62435ac235694a1a1f2e87ca56b549203d549b9971500c48569c453e9fe254e5"
   end
 
   def install
