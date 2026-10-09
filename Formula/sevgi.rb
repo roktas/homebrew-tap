@@ -4,6 +4,7 @@ class Sevgi < Formula
   url "https://github.com/roktas/sevgi/archive/refs/tags/v1.0.0.tar.gz"
   sha256 "42d46dee378f838241c1d1cbeb9d2d18ad50f72357854a95adf9f00fbee0160d"
   license "GPL-3.0-or-later"
+  revision 1
   head "https://github.com/roktas/sevgi.git", branch: "main"
 
   depends_on "pkgconf" => :build
@@ -17,6 +18,7 @@ class Sevgi < Formula
   depends_on "openssl@3"
   depends_on "pdfcpu"
   depends_on "poppler"
+  depends_on "roktas/tap/mainz"
   depends_on "ruby"
 
   resource "native-package-installer" do
@@ -269,7 +271,8 @@ class Sevgi < Formula
 
     assert_equal version.to_s, shell_output("#{bin}/sevgi --version").strip
     assert_equal version.to_s, shell_output("#{bin}/igves --version").strip
-    assert_match "pdfcpu", shell_output("#{formula_opt_bin("pdfcpu")}/pdfcpu version")
+    assert_equal 1, JSON.parse(shell_output("#{formula_opt_bin("roktas/tap/mainz")}/mainz --version"))["contract"]
+    system formula_opt_bin("pdfcpu")/"pdfcpu", "version"
     assert_match "pdfunite", shell_output("#{formula_opt_bin("poppler")}/pdfunite -v 2>&1")
 
     if build.head? || version >= Version.new("0.97.0")
