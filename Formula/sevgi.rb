@@ -223,7 +223,6 @@ class Sevgi < Formula
     resources.each do |resource|
       next if !appendix && extras.include?(resource.name)
 
-      resource.fetch
       args = [
         "gem", "install", resource.cached_download,
         "--ignore-dependencies", "--no-document", "--install-dir", libexec
