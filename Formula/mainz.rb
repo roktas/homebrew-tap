@@ -2,9 +2,9 @@ class Mainz < Formula
   desc "Prepare and style PDFs without changing protected content"
   homepage "https://github.com/roktas/mainz"
   url "https://github.com/roktas/mainz/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "c6b32ff326290a343d0a0c0b474ae9e41766d719dcac4ebef0c0465176985e79"
+  sha256 "9efb3cb74629f39055bcc1d0d6da07bf6eddcee5fffc8d36d6a476be284c8fcb"
   license "GPL-3.0-only"
-  revision 1
+  revision 2
 
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
