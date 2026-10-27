@@ -4,7 +4,6 @@ class Mainz < Formula
   url "https://github.com/roktas/mainz/archive/refs/tags/v1.0.0.tar.gz"
   sha256 "9efb3cb74629f39055bcc1d0d6da07bf6eddcee5fffc8d36d6a476be284c8fcb"
   license "GPL-3.0-only"
-  revision 2
 
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
