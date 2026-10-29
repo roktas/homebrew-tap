@@ -18,6 +18,7 @@ class Mainz < Formula
   depends_on "libxml2"
   depends_on "pango"
   depends_on "qpdf"
+  depends_on "zlib-ng-compat"
 
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args,
