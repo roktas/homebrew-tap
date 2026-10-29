@@ -12,7 +12,7 @@ brew install roktas/tap/mainz
 
 ## Sevgi
 
-[Sevgi](https://sevgi.roktas.dev) is a Ruby toolkit for creating SVG programmatically.
+[Sevgi](https://github.com/roktas/sevgi) is a Ruby toolkit for creating SVG programmatically.
 
 ```sh
 brew tap roktas/tap

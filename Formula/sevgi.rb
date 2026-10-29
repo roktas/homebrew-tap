@@ -1,6 +1,6 @@
 class Sevgi < Formula
   desc "Ruby toolkit for creating SVG"
-  homepage "https://sevgi.roktas.dev"
+  homepage "https://github.com/roktas/sevgi"
   url "https://github.com/roktas/sevgi/archive/refs/tags/v1.1.1.tar.gz"
   sha256 "4e4cc2e4aa3060a0f15249d40d29b2d52fe670f855bfbd3d4966dd9861c69508"
   license "GPL-3.0-or-later"
@@ -8,17 +8,22 @@ class Sevgi < Formula
 
   depends_on "pkgconf" => :build
   depends_on "cairo"
+  depends_on "freetype"
   depends_on "gdk-pixbuf"
+  depends_on "gettext"
   depends_on "glib"
   depends_on "gobject-introspection"
   depends_on "librsvg"
   depends_on "libxml2"
   depends_on "libxslt"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "pdfcpu"
   depends_on "poppler"
   depends_on "roktas/tap/mainz"
   depends_on "ruby"
+  depends_on "zlib-ng-compat"
+
+  uses_from_macos "libffi"
 
   resource "native-package-installer" do
     url "https://rubygems.org/downloads/native-package-installer-1.1.9.gem"
