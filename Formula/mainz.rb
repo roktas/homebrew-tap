@@ -10,7 +10,10 @@ class Mainz < Formula
   depends_on "pkgconf" => :build
   depends_on "cairo"
   depends_on "fontconfig"
+  depends_on "gdk-pixbuf"
+  depends_on "gettext"
   depends_on "glib"
+  depends_on "harfbuzz"
   depends_on "librsvg"
   depends_on "libxml2"
   depends_on "pango"
