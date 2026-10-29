@@ -1,10 +1,9 @@
 class Sevgi < Formula
   desc "Ruby toolkit for creating SVG"
   homepage "https://sevgi.roktas.dev"
-  url "https://github.com/roktas/sevgi/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "42d46dee378f838241c1d1cbeb9d2d18ad50f72357854a95adf9f00fbee0160d"
+  url "https://github.com/roktas/sevgi/archive/refs/tags/v1.1.1.tar.gz"
+  sha256 "4e4cc2e4aa3060a0f15249d40d29b2d52fe670f855bfbd3d4966dd9861c69508"
   license "GPL-3.0-or-later"
-  revision 1
   head "https://github.com/roktas/sevgi.git", branch: "main"
 
   depends_on "pkgconf" => :build
