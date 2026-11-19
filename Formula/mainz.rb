@@ -1,9 +1,8 @@
 class Mainz < Formula
   desc "Compose PDF pages and edit declared styles"
   homepage "https://github.com/roktas/mainz"
-  url "https://github.com/roktas/mainz/archive/88d2e2fb656f787d967168a8847972b0c732240c.tar.gz"
-  version "1.0.0"
-  sha256 "5c1811567907af486096fd0579b158af6e1b11bff06602a299a32db8e5be962d"
+  url "https://github.com/roktas/mainz/archive/refs/tags/v1.0.0.tar.gz"
+  sha256 "bd99cfb65059b8ada69e0765af0fdcef043d5dc3731feb42627da94f7a2e5112"
   license "GPL-3.0-only"
 
   depends_on "cmake" => :build
