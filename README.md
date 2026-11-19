@@ -4,7 +4,7 @@ Homebrew packages published by [Recai Oktaş](https://github.com/roktas).
 
 ## Mainz
 
-[Mainz](https://github.com/roktas/mainz) prepares editable PDFs from SVG and applies declared PDF styles.
+[Mainz](https://github.com/roktas/mainz) composes PDF pages, edits declared styles, and prepares editable PDFs from SVG.
 
 ```sh
 brew install roktas/tap/mainz

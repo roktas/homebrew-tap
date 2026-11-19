@@ -1,9 +1,9 @@
 class Mainz < Formula
-  desc "Prepare and style PDFs without changing protected content"
+  desc "Compose PDF pages and edit declared styles"
   homepage "https://github.com/roktas/mainz"
-  url "https://github.com/roktas/mainz/archive/3cbebc056e42b94f8a60dc7629584acb242a4580.tar.gz"
+  url "https://github.com/roktas/mainz/archive/88d2e2fb656f787d967168a8847972b0c732240c.tar.gz"
   version "1.0.0"
-  sha256 "a38d83b33f1311ae7dd846017c873791b40ada8d389df4d152bee26b22c99baf"
+  sha256 "5c1811567907af486096fd0579b158af6e1b11bff06602a299a32db8e5be962d"
   license "GPL-3.0-only"
 
   depends_on "cmake" => :build
@@ -43,7 +43,7 @@ class Mainz < Formula
         },
       },
     )
-    system bin/"mainz", "produce", "source.svg", "--declaration", "style.json", "--output", "prepared.pdf"
+    system bin/"mainz", "imprint", "source.svg", "--declaration", "style.json", "--output", "prepared.pdf"
     assert_equal({ "valid" => true, "version" => 1 }, JSON.parse(shell_output("#{bin}/mainz verify prepared.pdf")))
   end
 end
