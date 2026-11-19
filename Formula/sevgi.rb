@@ -1,8 +1,8 @@
 class Sevgi < Formula
   desc "Ruby toolkit for creating SVG"
   homepage "https://github.com/roktas/sevgi"
-  url "https://github.com/roktas/sevgi/archive/refs/tags/v1.1.1.tar.gz"
-  sha256 "4e4cc2e4aa3060a0f15249d40d29b2d52fe670f855bfbd3d4966dd9861c69508"
+  url "https://github.com/roktas/sevgi/archive/refs/tags/v2.0.0.tar.gz"
+  sha256 "83ecb458d54c9207a99bb5e8681648b759f8245ba57f6db395be6fc5dd013adc"
   license "GPL-3.0-or-later"
   head "https://github.com/roktas/sevgi.git", branch: "main"
 
@@ -31,8 +31,8 @@ class Sevgi < Formula
   end
 
   resource "pkg-config" do
-    url "https://rubygems.org/downloads/pkg-config-1.6.5.gem"
-    sha256 "33f9f81c5322983d22b439b8b672f27777b406fea23bfec74ff14bbeb42ec733"
+    url "https://rubygems.org/downloads/pkg-config-1.6.7.gem"
+    sha256 "0415eff78595da55a60d1ba4e9098572c73afbe6b4c06ec50ded1972f1e1070b"
   end
 
   resource "public_suffix" do
@@ -41,8 +41,8 @@ class Sevgi < Formula
   end
 
   resource "addressable" do
-    url "https://rubygems.org/downloads/addressable-2.9.0.gem"
-    sha256 "7fdf6ac3660f7f4e867a0838be3f6cf722ace541dd97767fa42bc6cfa980c7af"
+    url "https://rubygems.org/downloads/addressable-2.9.2.gem"
+    sha256 "9117c7e7d6ee07230e75ce41fb9401ae55354dc654fcd0e862ba41d539e9a610"
   end
 
   resource "css_parser" do
@@ -61,8 +61,8 @@ class Sevgi < Formula
   end
 
   resource "nokogiri" do
-    url "https://rubygems.org/downloads/nokogiri-1.19.4.gem"
-    sha256 "50c951611c92bca05c51411aef45f1cbc50f2821c4802758c5c6d34696533ab5"
+    url "https://rubygems.org/downloads/nokogiri-1.19.7.gem"
+    sha256 "abe94507c54cb18f872777b16bdca4aad32b1abdc4c52fe843f1c80fbdf992b8"
   end
 
   resource "rufo" do
@@ -85,14 +85,19 @@ class Sevgi < Formula
     sha256 "1037ad2868ae58df9ad917891c0c0f9815a1172f6846d4bcdd508e4c2ee747c2"
   end
 
+  resource "strscan" do
+    url "https://rubygems.org/downloads/strscan-3.1.8.gem"
+    sha256 "aae2db611a225559f21ffbb71765c9a4e60fd262534a9ea84f4f11c7f32f679e"
+  end
+
   resource "hexapdf" do
-    url "https://rubygems.org/downloads/hexapdf-1.10.0.gem"
-    sha256 "9c2e8d094876878c6203d441655fafc1890870041456e03205eec7d83edf9db2"
+    url "https://rubygems.org/downloads/hexapdf-1.11.2.gem"
+    sha256 "c69ea394cc1c4b291ee17cbf2707956ad975948db4f9cf7b9d9d3bfca87b5f1c"
   end
 
   resource "json" do
-    url "https://rubygems.org/downloads/json-3.0.2.gem"
-    sha256 "8e6d7e7b11384c21230430cef90b71f14849a34a1f4452796670f7c981bd19df"
+    url "https://rubygems.org/downloads/json-3.1.0.gem"
+    sha256 "3ce7ccf8fde58960177a3a756c31f292a4c1e1dedee884547096a5b0604e3bd8"
   end
 
   resource "ast" do
@@ -111,13 +116,13 @@ class Sevgi < Formula
   end
 
   resource "parallel" do
-    url "https://rubygems.org/downloads/parallel-2.2.0.gem"
-    sha256 "e1059c5fd7b649558a0aec38a769f06a42942bdb40503d005a59c352fe011cd8"
+    url "https://rubygems.org/downloads/parallel-2.3.0.gem"
+    sha256 "f75a3e904101ce6a1ccb6b8dc800cbafd42166d83330192438dcf29395167a6f"
   end
 
   resource "parser" do
-    url "https://rubygems.org/downloads/parser-3.3.12.0.gem"
-    sha256 "21a6d7f755d5a24dfbdc6e6b772e4e879a52e7631a88bc5a3a134606052c9828"
+    url "https://rubygems.org/downloads/parser-3.3.13.0.gem"
+    sha256 "e02f9b63c2fe05b0c68f692ba4df89b3cb113b663964f75d988fbebfd6c3deca"
   end
 
   resource "prism" do
@@ -131,8 +136,8 @@ class Sevgi < Formula
   end
 
   resource "regexp_parser" do
-    url "https://rubygems.org/downloads/regexp_parser-2.12.0.gem"
-    sha256 "35a916a1d63190ab5c9009457136ae5f3c0c7512d60291d0d1378ba18ce08ebb"
+    url "https://rubygems.org/downloads/regexp_parser-2.13.1.gem"
+    sha256 "5aedb6b7c35688f51e86eef17a15374dfd287c83f4ca644b2c5f3ec50a33b44b"
   end
 
   resource "ruby-progressbar" do
@@ -141,13 +146,13 @@ class Sevgi < Formula
   end
 
   resource "unicode-emoji" do
-    url "https://rubygems.org/downloads/unicode-emoji-4.2.0.gem"
-    sha256 "519e69150f75652e40bf736106cfbc8f0f73aa3fb6a65afe62fefa7f80b0f80f"
+    url "https://rubygems.org/downloads/unicode-emoji-4.3.0.gem"
+    sha256 "11c02fa73290378c066bb0562cd4c87d8e1b706fbbe0059ca12746a4244de8ce"
   end
 
   resource "unicode-display_width" do
-    url "https://rubygems.org/downloads/unicode-display_width-3.2.0.gem"
-    sha256 "0cdd96b5681a5949cdbc2c55e7b420facae74c4aaf9a9815eee1087cb1853c42"
+    url "https://rubygems.org/downloads/unicode-display_width-3.3.0.gem"
+    sha256 "4b7aa66a4b11db50f6f7e98411215cd0dd10eaecb665d36eec5bcacb3fa0b613"
   end
 
   resource "rubocop-ast" do
@@ -156,8 +161,8 @@ class Sevgi < Formula
   end
 
   resource "rubocop" do
-    url "https://rubygems.org/downloads/rubocop-1.91.0.gem"
-    sha256 "9c82b7bf391c5d7e3798c5b9996e22a1fe3bd7468e351dfdeb96140c058296d0"
+    url "https://rubygems.org/downloads/rubocop-1.92.2.gem"
+    sha256 "14fb31eed143a0dc6f78186c550c1715e81cd38f59d05d1165050e445c1f5382"
   end
 
   resource "matrix" do
@@ -176,13 +181,13 @@ class Sevgi < Formula
   end
 
   resource "glib2" do
-    url "https://rubygems.org/downloads/glib2-4.3.9.gem"
-    sha256 "32c1db447e812e5e34f9e62f1f2103e2cb4a5d0d03217a886b2a2877639549cd"
+    url "https://rubygems.org/downloads/glib2-4.4.0.gem"
+    sha256 "0cab1c0433057d765ba21eac0bd9ea61fdbfc9997ab9eff5b1d087b35492b27b"
   end
 
   resource "gobject-introspection" do
-    url "https://rubygems.org/downloads/gobject-introspection-4.3.9.gem"
-    sha256 "509c0e69b99fb171683f28ea3172f82a46950b032f4628986330418771bdd56b"
+    url "https://rubygems.org/downloads/gobject-introspection-4.4.0.gem"
+    sha256 "c94fe81dd945a80ad87881734d90b54709eeec61af1a76ddfecbf1fb4180520c"
   end
 
   resource "fiddle" do
@@ -191,8 +196,8 @@ class Sevgi < Formula
   end
 
   resource "gio2" do
-    url "https://rubygems.org/downloads/gio2-4.3.9.gem"
-    sha256 "6ddcbaec05beb20332fcfd1ca598dcf46392541aeb0b5d4b8df2306adffc0acc"
+    url "https://rubygems.org/downloads/gio2-4.4.0.gem"
+    sha256 "bbffde4edeb573ef96912872c000c05bb1c3101eafc95b87186d27d058d4b63c"
   end
 
   resource "rake" do
@@ -201,32 +206,24 @@ class Sevgi < Formula
   end
 
   resource "gdk_pixbuf2" do
-    url "https://rubygems.org/downloads/gdk_pixbuf2-4.3.9.gem"
-    sha256 "1b78f2b21de7d4dcef6b351895d1bc22099a53d987f005d4b09f62b6816b3cbc"
+    url "https://rubygems.org/downloads/gdk_pixbuf2-4.4.0.gem"
+    sha256 "58aa55e020af41232cb94573b9cae3e8a7d9e6ea9f1d5653189db275f76d3204"
   end
 
   resource "cairo-gobject" do
-    url "https://rubygems.org/downloads/cairo-gobject-4.3.9.gem"
-    sha256 "f093931812898edd87416691b8e3315c61a0c8a6d531519fbc6c64e97b6d85c8"
+    url "https://rubygems.org/downloads/cairo-gobject-4.4.0.gem"
+    sha256 "9f73c6b719688210bcf0920a08c517d24dd1023beff32d17d46aa3a63209f9b8"
   end
 
   resource "rsvg2" do
-    url "https://rubygems.org/downloads/rsvg2-4.3.9.gem"
-    sha256 "62435ac235694a1a1f2e87ca56b549203d549b9971500c48569c453e9fe254e5"
+    url "https://rubygems.org/downloads/rsvg2-4.4.0.gem"
+    sha256 "30793faf9071a0df0dae51df9fdbd40e1b095292e5781a1dcf2b9706e28b243a"
   end
 
   def install
     ENV["GEM_HOME"] = libexec
 
-    appendix = (buildpath/"appendix").directory?
-    extras = %w[
-      ast language_server-protocol lint_roller parallel parser prism rainbow regexp_parser rubocop rubocop-ast
-      ruby-progressbar unicode-display_width unicode-emoji
-    ]
-
     resources.each do |resource|
-      next if !appendix && extras.include?(resource.name)
-
       args = [
         "gem", "install", resource.cached_download,
         "--ignore-dependencies", "--no-document", "--install-dir", libexec
@@ -245,9 +242,7 @@ class Sevgi < Formula
       system(*args)
     end
 
-    components = %w[function geometry graphics standard derender sundries]
-    components << "appendix" if appendix
-    components << "toplevel"
+    components = %w[function geometry graphics standard derender sundries appendix toplevel]
     components.each do |component|
       cd component do
         gemspec = Dir["*.gemspec"].fetch(0)
@@ -257,38 +252,37 @@ class Sevgi < Formula
       end
     end
 
-    (pkgshare/"skills").install buildpath/"appendix/agents/skills/sevgi" if appendix
+    (pkgshare/"skills").install buildpath/"appendix/agents/skills/sevgi"
 
-    executables = appendix ? %w[igsev igves sevgi] : %w[igves sevgi]
-    bin.install(*executables.map { libexec/"bin"/it })
+    bin.install(*%w[igsev igves sevgi].map { libexec/"bin"/it })
     environment = {
-      PATH:     "#{formula_opt_bin("ruby")}:$PATH",
-      GEM_HOME: ENV["GEM_HOME"],
+      PATH:        "#{formula_opt_bin("ruby")}:$PATH",
+      GEM_HOME:    ENV["GEM_HOME"],
+      SEVGI_SKILL: (opt_share/"sevgi/skills/sevgi").to_s,
     }
-    environment[:SEVGI_SKILL] = (opt_share/"sevgi/skills/sevgi").to_s if appendix
     bin.env_script_all_files libexec/"bin", environment
   end
 
   test do
     ENV["GEM_HOME"] = libexec
 
+    mainz = formula_opt_bin("roktas/tap/mainz")/"mainz"
     assert_equal version.to_s, shell_output("#{bin}/sevgi --version").strip
     assert_equal version.to_s, shell_output("#{bin}/igves --version").strip
-    assert_equal 1, JSON.parse(shell_output("#{formula_opt_bin("roktas/tap/mainz")}/mainz --version"))["contract"]
+    assert_equal version.to_s, shell_output("#{bin}/igsev --version").strip
+    assert_equal 1, JSON.parse(shell_output("#{mainz} --version"))["contract"]
     system formula_opt_bin("pdfcpu")/"pdfcpu", "version"
     assert_match "pdfunite", shell_output("#{formula_opt_bin("poppler")}/pdfunite -v 2>&1")
 
-    if build.head? || version >= Version.new("0.97.0")
-      assert_equal version.to_s, shell_output("#{bin}/igsev --version").strip
-      skill = shell_output("#{bin}/sevgi --skill").strip
-      assert_equal (opt_share/"sevgi/skills/sevgi").to_s, skill
-      assert_path_exists Pathname(skill)/"SKILL.md"
-      rubocop = "#{libexec}/bin/rubocop --config /dev/null --plugin sevgi-appendix"
-      assert_match "Sevgi/Parentheses", shell_output("#{rubocop} --show-cops Sevgi/Parentheses")
-    end
+    skill = shell_output("#{bin}/sevgi --skill").strip
+    assert_equal (opt_share/"sevgi/skills/sevgi").to_s, skill
+    assert_path_exists Pathname(skill)/"SKILL.md"
+    rubocop = "#{libexec}/bin/rubocop --config /dev/null --plugin sevgi-appendix"
+    assert_match "Sevgi/Parentheses", shell_output("#{rubocop} --show-cops Sevgi/Parentheses")
 
     pdf = testpath/"circle.pdf"
     png = testpath/"circle.png"
+    prepared = testpath/"prepared.pdf"
     (testpath/"circle.sevgi").write <<~RUBY
       drawing = SVG width: 10, height: 10 do
         circle cx: 5, cy: 5, r: 4, fill: "tomato"
@@ -296,6 +290,11 @@ class Sevgi < Formula
 
       drawing.PDF #{pdf.to_s.dump}
       drawing.PNG #{png.to_s.dump}
+
+      drawing.Imprint do
+        Page name: "Circle"
+      end
+      drawing.PDF #{prepared.to_s.dump}, fallback: false
     RUBY
 
     log = shell_output("#{bin}/sevgi #{testpath}/circle.sevgi 2>&1")
@@ -304,12 +303,12 @@ class Sevgi < Formula
       assert_path_exists output
       assert_operator output.size, :>, 0
     end
+    report = JSON.parse(shell_output("#{mainz} describe #{prepared}"))
+    assert_equal "Circle", report.fetch("pages").first.fetch("name")
 
     source = testpath/"circle.svg"
     source.write '<svg xmlns="http://www.w3.org/2000/svg"><circle r="4"/></svg>'
     assert_match "circle r: 4", shell_output("#{bin}/igves #{source}")
-    if build.head? || version >= Version.new("0.97.0")
-      assert_match '<circle r="4"/>', shell_output("#{bin}/igsev #{source}")
-    end
+    assert_match '<circle r="4"/>', shell_output("#{bin}/igsev #{source}")
   end
 end
