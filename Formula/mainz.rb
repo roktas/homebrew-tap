@@ -1,16 +1,10 @@
 class Mainz < Formula
   desc "Compose PDF pages and edit declared styles"
   homepage "https://github.com/roktas/mainz"
-  url "https://github.com/roktas/mainz/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "bd99cfb65059b8ada69e0765af0fdcef043d5dc3731feb42627da94f7a2e5112"
+  url "https://github.com/roktas/mainz/archive/e334e0deac4cc6a3990a4000c65b92003b28d7a0.tar.gz"
+  version "1.0.0"
+  sha256 "9f912e7c33f1712ace8ec82799f5a2154039f228e8913c8de949ba8d26e9f444"
   license "GPL-3.0-only"
-
-  bottle do
-    root_url "https://github.com/roktas/homebrew-tap/releases/download/mainz-1.0.0"
-    rebuild 2
-    sha256 cellar: :any, arm64_tahoe:  "a60084e544b66c707d31b29eade6583f9c309daf80ad1e4eb8843c59e900d7fc"
-    sha256 cellar: :any, x86_64_linux: "7d83560d389db2ed9d573aedcb0ff4abf713bcbbd201964252ba1e9396703484"
-  end
 
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
