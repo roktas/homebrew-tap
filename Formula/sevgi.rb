@@ -6,6 +6,12 @@ class Sevgi < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/roktas/sevgi.git", branch: "main"
 
+  bottle do
+    root_url "https://github.com/roktas/homebrew-tap/releases/download/sevgi-2.1.0"
+    sha256 cellar: :any, arm64_tahoe:  "44a15e606d949243dd822f5fa5ec4470ee39660a5110af100128576d17133fac"
+    sha256 cellar: :any, x86_64_linux: "95c76d9728f43a7ca28c2bbe003538fe74d85705e0ce4696cffb35619d94f7d8"
+  end
+
   depends_on "pkgconf" => :build
   depends_on "cairo"
   depends_on "freetype"
