@@ -1,16 +1,10 @@
 class Sevgi < Formula
   desc "Ruby toolkit for creating SVG"
   homepage "https://github.com/roktas/sevgi"
-  url "https://github.com/roktas/sevgi/archive/refs/tags/v2.0.0.tar.gz"
-  sha256 "83ecb458d54c9207a99bb5e8681648b759f8245ba57f6db395be6fc5dd013adc"
+  url "https://github.com/roktas/sevgi/archive/refs/tags/v2.1.0.tar.gz"
+  sha256 "91e8363a8a47c2667cfdd0ed95b337c03dcbc8da46ac1a457e952f129ea8e774"
   license "GPL-3.0-or-later"
   head "https://github.com/roktas/sevgi.git", branch: "main"
-
-  bottle do
-    root_url "https://github.com/roktas/homebrew-tap/releases/download/sevgi-2.0.0"
-    sha256 cellar: :any, arm64_tahoe:  "1c46cbcd302a1bd22796794a9e0aa22fbee59536b0c0e92312235b312c7eb939"
-    sha256 cellar: :any, x86_64_linux: "5be23c592d02420a3c29e3d531d9a8d4b4a686cb3b08fda6bcf053e2f1fc84e0"
-  end
 
   depends_on "pkgconf" => :build
   depends_on "cairo"
@@ -37,8 +31,8 @@ class Sevgi < Formula
   end
 
   resource "pkg-config" do
-    url "https://rubygems.org/downloads/pkg-config-1.6.7.gem"
-    sha256 "0415eff78595da55a60d1ba4e9098572c73afbe6b4c06ec50ded1972f1e1070b"
+    url "https://rubygems.org/downloads/pkg-config-1.6.8.gem"
+    sha256 "7045fa6e185929fa7329f39c6fac934b0df70d643f3e0954c4a2e592355ea2e8"
   end
 
   resource "public_suffix" do
@@ -47,8 +41,8 @@ class Sevgi < Formula
   end
 
   resource "addressable" do
-    url "https://rubygems.org/downloads/addressable-2.9.2.gem"
-    sha256 "9117c7e7d6ee07230e75ce41fb9401ae55354dc654fcd0e862ba41d539e9a610"
+    url "https://rubygems.org/downloads/addressable-2.10.0.gem"
+    sha256 "5e13b9c001adf01dd65ad6e0d2a91d2bc07885c0ff2b83f48cbcd95e08d9de62"
   end
 
   resource "css_parser" do
@@ -127,8 +121,8 @@ class Sevgi < Formula
   end
 
   resource "parser" do
-    url "https://rubygems.org/downloads/parser-3.3.13.0.gem"
-    sha256 "e02f9b63c2fe05b0c68f692ba4df89b3cb113b663964f75d988fbebfd6c3deca"
+    url "https://rubygems.org/downloads/parser-3.3.14.0.gem"
+    sha256 "62f8f76af7b919425ee2d811880e9dcb8011ab40bfd59970dfb583141697e58f"
   end
 
   resource "prism" do
@@ -142,8 +136,8 @@ class Sevgi < Formula
   end
 
   resource "regexp_parser" do
-    url "https://rubygems.org/downloads/regexp_parser-2.13.1.gem"
-    sha256 "5aedb6b7c35688f51e86eef17a15374dfd287c83f4ca644b2c5f3ec50a33b44b"
+    url "https://rubygems.org/downloads/regexp_parser-2.13.4.gem"
+    sha256 "1d0547814f57e6f00946957bd0ca201bc42f42cfb08eee89df60998aedcd8a3b"
   end
 
   resource "ruby-progressbar" do
@@ -162,13 +156,13 @@ class Sevgi < Formula
   end
 
   resource "rubocop-ast" do
-    url "https://rubygems.org/downloads/rubocop-ast-1.50.0.gem"
-    sha256 "b9ca88300da0803ee222ad20cdb30494c0a784eed06fdc35d254b06d662788db"
+    url "https://rubygems.org/downloads/rubocop-ast-1.53.0.gem"
+    sha256 "027984d28485d6502ae4c72f9341080f54f538599f5dbb54f81875a4ddcad574"
   end
 
   resource "rubocop" do
-    url "https://rubygems.org/downloads/rubocop-1.92.2.gem"
-    sha256 "14fb31eed143a0dc6f78186c550c1715e81cd38f59d05d1165050e445c1f5382"
+    url "https://rubygems.org/downloads/rubocop-1.92.3.gem"
+    sha256 "fd77feac46e8e91c3a534f868a1702c59f5bf8173515fd00a3c6ce1198672ff6"
   end
 
   resource "matrix" do
@@ -239,10 +233,10 @@ class Sevgi < Formula
         xslt = formula_opt_prefix("libxslt")
         args += [
           "--", "--use-system-libraries",
-          "--with-xml2-include=#{xml2/"include/libxml2"}",
-          "--with-xml2-lib=#{xml2/"lib"}",
-          "--with-xslt-include=#{xslt/"include"}",
-          "--with-xslt-lib=#{xslt/"lib"}"
+          "--with-xml2-include=#{xml2}/include/libxml2",
+          "--with-xml2-lib=#{xml2}/lib",
+          "--with-xslt-include=#{xslt}/include",
+          "--with-xslt-lib=#{xslt}/lib"
         ]
       end
       system(*args)
