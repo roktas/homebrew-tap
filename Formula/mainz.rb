@@ -7,9 +7,9 @@ class Mainz < Formula
 
   bottle do
     root_url "https://github.com/roktas/homebrew-tap/releases/download/mainz-1.0.0"
-    rebuild 1
-    sha256 cellar: :any, arm64_tahoe:  "0ffc4eaba3e65b21f03a4c75db2445fe07bc23742ee037a1d84b3c25247e9237"
-    sha256 cellar: :any, x86_64_linux: "a284c505171d7df6b91fc34f28b6ca9385e299d1a9414be6964f5a21707448a4"
+    rebuild 2
+    sha256 cellar: :any, arm64_tahoe:  "a60084e544b66c707d31b29eade6583f9c309daf80ad1e4eb8843c59e900d7fc"
+    sha256 cellar: :any, x86_64_linux: "7d83560d389db2ed9d573aedcb0ff4abf713bcbbd201964252ba1e9396703484"
   end
 
   depends_on "cmake" => :build
