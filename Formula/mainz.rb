@@ -6,6 +6,12 @@ class Mainz < Formula
   sha256 "bf608719e587a4aaa47072aeb76b421c225d4395a7d8493eb58f97d68057ad0c"
   license "GPL-3.0-only"
 
+  bottle do
+    root_url "https://github.com/roktas/homebrew-tap/releases/download/mainz-1.0.0"
+    sha256 cellar: :any, arm64_tahoe:  "98b0b3de96903305a77ec8ffb12eb9ee4e6c675a2eef62e66ca8fb2959e2db33"
+    sha256 cellar: :any, x86_64_linux: "a70cca955c275f016bc6f6d5c7e3c4376d25a58f76ded2a7a4981b753ee02c35"
+  end
+
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
   depends_on "cairo"
