@@ -8,8 +8,9 @@ class Sevgi < Formula
 
   bottle do
     root_url "https://github.com/roktas/homebrew-tap/releases/download/sevgi-2.1.0"
-    sha256 cellar: :any, arm64_tahoe:  "44a15e606d949243dd822f5fa5ec4470ee39660a5110af100128576d17133fac"
-    sha256 cellar: :any, x86_64_linux: "95c76d9728f43a7ca28c2bbe003538fe74d85705e0ce4696cffb35619d94f7d8"
+    rebuild 1
+    sha256 cellar: :any, arm64_tahoe:  "dd9fd86369f65662dbc903ea60826d6b7ee0460c7c83c2b2eb2ce3937d7ac30f"
+    sha256 cellar: :any, x86_64_linux: "11ea691941c050438d79367bbf0c1957117df0494f8dd1a1e2a7b5d3cd071476"
   end
 
   depends_on "pkgconf" => :build
